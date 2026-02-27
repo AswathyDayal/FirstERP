@@ -1,0 +1,65 @@
+:root {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f7fb;
+}
+
+.site-header {
+    background: #102a43;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.container {
+    max-width: 920px;
+    margin: 1.5rem auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.erp-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.erp-table th,
+.erp-table td {
+    border-bottom: 1px solid #d9e2ec;
+    padding: .75rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .6rem .9rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #2f80ed;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #9aa5b1;
+    color: #fff;
+}
+
+.form-card {
+    display: grid;
+    gap: .6rem;
+    max-width: 380px;
+}
+
+.alert-success {
+    margin: .8rem 0;
+    color: #116329;
+}
+
+.text-danger {
+    color: #b42318;
+}
