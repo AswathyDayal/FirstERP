@@ -63,3 +63,50 @@ body {
 .text-danger {
     color: #b42318;
 }
+
+.top-nav {
+    margin-top: .6rem;
+    display: flex;
+    gap: .9rem;
+}
+
+.top-nav a {
+    color: #d9e2ec;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dashboard-header h2 {
+    margin-top: 0;
+}
+
+.dashboard-header p {
+    color: #486581;
+}
+
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: .8rem;
+    margin-bottom: 1rem;
+}
+
+.metric-card {
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+    padding: .9rem;
+    background: #f8fbff;
+}
+
+.metric-card h3 {
+    margin: 0;
+    font-size: .95rem;
+    color: #334e68;
+}
+
+.metric-card p {
+    margin: .4rem 0 0;
+    font-size: 1.3rem;
+    color: #102a43;
+    font-weight: 700;
+}
