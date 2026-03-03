@@ -110,3 +110,21 @@ body {
     color: #102a43;
     font-weight: 700;
 }
+
+.pager {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .6;
+}
+
+.actions {
+    margin-top: .5rem;
+    display: flex;
+    gap: .5rem;
+}
