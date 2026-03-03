@@ -1,0 +1,63 @@
+@model FirstERP.Web.ViewModels.DashboardViewModel
+
+<section class="dashboard-header">
+    <h2>Sales & Product Dashboard</h2>
+    <p>Snapshot of product inventory and projected sales performance.</p>
+</section>
+
+<section class="dashboard-metrics">
+    <article class="metric-card">
+        <h3>Total Products</h3>
+        <p>@Model.TotalProducts</p>
+    </article>
+    <article class="metric-card">
+        <h3>Total Stock Units</h3>
+        <p>@Model.TotalStockQuantity</p>
+    </article>
+    <article class="metric-card">
+        <h3>Inventory Value</h3>
+        <p>@Model.InventoryValue.ToString("C")</p>
+    </article>
+    <article class="metric-card">
+        <h3>Est. Monthly Sales</h3>
+        <p>@Model.EstimatedMonthlySales.ToString("C")</p>
+    </article>
+</section>
+
+<section>
+    <div class="toolbar">
+        <a class="btn btn-primary" asp-controller="Product" asp-action="Index">Manage Products</a>
+    </div>
+
+    <h3>Top Products by Inventory Value</h3>
+    <table class="erp-table">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Inventory Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (Model.TopProducts.Count == 0)
+        {
+            <tr>
+                <td colspan="4">No products available to display.</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model.TopProducts)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Price.ToString("C")</td>
+                    <td>@item.StockQuantity</td>
+                    <td>@(item.Price * item.StockQuantity).ToString("C")</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</section>

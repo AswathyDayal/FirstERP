@@ -8,7 +8,11 @@
 </head>
 <body>
     <header class="site-header">
-        <h1>FirstERP - Product Module</h1>
+        <h1>FirstERP</h1>
+        <nav class="top-nav">
+            <a asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+            <a asp-controller="Product" asp-action="Index">Products</a>
+        </nav>
     </header>
     <main class="container">
         @RenderBody()
